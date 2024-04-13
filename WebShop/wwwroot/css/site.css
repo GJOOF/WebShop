@@ -1,0 +1,63 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.info-card {
+    width: 300px;
+    border: 1px solid #ddd; /* Цвет рамки */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+    margin: 20px;
+}
+
+    .info-card img {
+        width: 100%; /* Ширина изображения */
+        height: auto; /* Автоматическая высота */
+        border-bottom: 1px solid #ddd; /* Разделительная линия */
+    }
+
+.info-card-content {
+    padding: 20px;
+}
+
+.info-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    margin-bottom: 10px;
+}
+
+.info-card a {
+    text-decoration: none;
+    color: #007bff; /* Цвет ссылки */
+    display: block;
+    text-align: center;
+    border: 1px solid #007bff; /* Цвет рамки */
+    border-radius: 5px;
+    padding: 5px 0;
+    width: 100px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+    .info-card a:hover {
+        background-color: #007bff; /* Цвет фона ссылки при наведении */
+        color: #fff; /* Цвет текста ссылки при наведении */
+    }
