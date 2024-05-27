@@ -61,3 +61,37 @@ body {
         background-color: #007bff; /* ÷вет фона ссылки при наведении */
         color: #fff; /* ÷вет текста ссылки при наведении */
     }
+
+.card {
+    border-radius: 35px;
+}
+.card-body{
+    border-radius: 35px;
+}
+.row .col-3 .card .rock .card-body {
+    background: url(/rock-wallpaper.jpg) no-repeat;
+    background-size: 100%;
+    color: #FF8114;
+    transition: background 0.3s ease;
+}
+
+.row .col-3 .card .jazz .card-body {
+    background: url(/jazz-wallpaper.jpg) no-repeat;
+    background-size: 100%;
+    color: #FF8114;
+    transition: background 0.4s ease;
+}
+
+.row .col-3 .card .country .card-body {
+    background: white url(/country-wallpaper.jpg) no-repeat;
+    background-size: 100%;
+    color: #FF8114;
+    transition: background 0.4s ease;
+}
+
+.row .col-3 .card .classic .card-body {
+    background: url(/classic-wallpaper.jpg) no-repeat;
+    background-size: 100%;
+    color: #FF8114;
+    transition: background-color 0.4s ease;
+}
