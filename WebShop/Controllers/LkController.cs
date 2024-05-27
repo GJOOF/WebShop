@@ -5,79 +5,21 @@ namespace Webshop.Controllers
 {
     public class LkController : Controller
     {
-        // GET: LkController
-        public ActionResult Index()
+        public IActionResult Favorites()
         {
             return View();
         }
-
-        // GET: LkController/Details/5
-        public ActionResult Details(int id)
+        public IActionResult Deliveries()
         {
             return View();
         }
-
-        // GET: LkController/Create
-        public ActionResult Create()
+        public IActionResult Profile()
         {
             return View();
         }
-
-        // POST: LkController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: LkController/Edit/5
-        public ActionResult Edit(int id)
+        public IActionResult Cart()
         {
             return View();
-        }
-
-        // POST: LkController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: LkController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: LkController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }

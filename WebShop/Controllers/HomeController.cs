@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Webshop.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Webshop.Controllers
 {
@@ -23,6 +24,10 @@ namespace Webshop.Controllers
             return View();
         }
 
+        public IActionResult Catalog()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

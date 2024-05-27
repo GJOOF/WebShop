@@ -17,6 +17,7 @@ namespace WebShop
 
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddSingleton<>();
             services.AddControllersWithViews();
         }
 
