@@ -1,4 +1,6 @@
 ﻿using Webshop.Models;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Webshop
 {
@@ -6,14 +8,18 @@ namespace Webshop
     {
         private List<Product> products = new List<Product>()
         {
-            new Product(),
+            new Product("Led Zeppelin I",5000,"vinyl disc","/lz1.jpg"),
 
-            new Product(),
+            new Product("Led Zeppelin II", 5000,"vinyl disc","/lz2.jpg"),
 
-            new Product()
+            new Product("Led Zeppelin III", 5000,"vinyl disc","/lz3.jpg"),
+
+            new Product("Led Zeppelin IV", 5000,"vinyl disc","/lz4.jpg"),
+            new Product("Led Zeppelin V", 5000,"vinyl disc","/lz2.jpg")
         };
         public void Add(Product product)
         {
+            product.ImagePath = "/lz2.jpg";
             products.Add(product);
         }
 
