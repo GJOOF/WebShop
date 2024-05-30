@@ -15,6 +15,7 @@ namespace Webshop
             new Product("Led Zeppelin III", 5000,"vinyl disc","/lz3.jpg"),
 
             new Product("Led Zeppelin IV", 5000,"vinyl disc","/lz4.jpg"),
+
             new Product("Led Zeppelin V", 5000,"vinyl disc","/lz2.jpg")
         };
         public void Add(Product product)
