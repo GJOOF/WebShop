@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Webshop;
+using OnlineShop.Db;
+using Webshop.Db;
 
 namespace WebShop
 {
@@ -18,9 +20,11 @@ namespace WebShop
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IProductRepository, ProductsInMemoryRepository>();
-            services.AddSingleton<ICartsRepository, CartsInMemoryRepository>();
-            // services.AddSingleton<IOrderRepository, OrdersInMemoryRepository>();
+            string connection = Configuration.GetConnectionString("WebShop");
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connection));
+
+            services.AddTransient<IProductRepository, ProductsDbRepository>();
+            services.AddTransient<ICartsRepository, CartsDbRepository>();
             services.AddControllersWithViews();
         }
 
@@ -34,6 +38,7 @@ namespace WebShop
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
