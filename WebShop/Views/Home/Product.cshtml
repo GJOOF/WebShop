@@ -1,0 +1,19 @@
+﻿@model ProductViewModel
+
+@{
+    ViewData["Title"] = "Product Page";
+}
+
+<div class="row">
+    <div class="col-6">
+        <img class="card-img-top" src="@Model.ImagePath" alt="ProductImage" />
+    </div>
+    <div class="col-6">
+        <h5>@Model.Name</h5>
+        <h5>@Model.Cost</h5>
+        <h5>@Model.Description</h5>
+        <a asp-controller="Home" asp-action="Catalog" class="btn btn-primary">Продолжить покупки</a>
+        <br>
+        <a asp-controller="Cart" asp-action="Add" asp-route-productId="@Model.Id" class="btn btn-primary mt-3">Добавить в корзину</a>
+    </div>
+</div>
