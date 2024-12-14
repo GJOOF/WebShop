@@ -4,9 +4,16 @@ namespace Webshop.Controllers
 {
     public class CatalogController : Controller
     {
-        public IActionResult Index()
+        private readonly IProductRepository productRepository;
+        public CatalogController(IProductRepository productRepository)
         {
-            return View();
+            this.productRepository = productRepository;
+        }
+
+        public IActionResult Index(int id)
+        {
+            var product = productRepository.TryGetById(id);
+            return View(product);
         }
     }
 }

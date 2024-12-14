@@ -1,7 +1,37 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style>
+    .card {
+        border-radius: 35px;
+    }
 
+    .card-body {
+        border-radius: 35px;
+        box-shadow: 5px 5px 5px;
+    }
+
+        .card-body:hover {
+            transform: scale(1.005);
+            box-shadow: 5px 5px 5px grey;
+        }
+
+    .row .col-3 .card .rock .card-body {
+        transition: background 0.3s ease;
+    }
+
+    .row .col-3 .card .jazz .card-body {
+        transition: background 0.4s ease;
+    }
+
+    .row .col-3 .card .country .card-body {
+        transition: background 0.4s ease;
+    }
+
+    .row .col-3 .card .classic .card-body {
+        transition: background-color 0.4s ease;
+    }
+</style>
 <div id="carouselId" class="carousel slide" data-bs-ride="carousel" style=" padding-top: 20px; padding-bottom: 20px">
     <div class="carousel-inner" role="listbox" style="border-radius: 15px;">
         <div class="carousel-item active">
@@ -35,38 +65,46 @@
 
 <div class="row">
     <div class="col-3">
-        <div class="card">
+        <div class="card" style="">
+            <div class="rock">
             <div class="card-body">
-                <h3 class="card-title">Rock<h3>
-                <img src="~/rock.png" alt="Logo" width="64" height="64" class="d-inline-block align-text-top" alt="Title" />
+                <h3 class="card-title"><a>Rock</a><h3>
+                    <img src="~/rock.png" alt="Logo" width="64" height="64" class="d-inline-block align-text-top" alt="Title"/>
                 <p class="card-text"></p>
+                </div>
             </div>
         </div>
     </div>
     <div class="col-3">
         <div class="card">
+            <div class="jazz">
             <div class="card-body">
-                <h3 class="card-title">Blues</h3>
-                <img src="~/blues.png" alt="Logo" width="64" height="64" class="d-inline-block align-text-top" alt="Title" />
+                <h3 class="card-title"><a>Jazz</a></h3>
+                    <img src="~/blues.png" alt="Logo" width="64" height="64" class="d-inline-block align-text-top" alt="Title" hidden="true" />
                 <p class="card-text"></p>
+               </div>
             </div>
         </div>
     </div>
     <div class="col-3">
         <div class="card">
+            <div class="country">
             <div class="card-body">
-                <h3 class="card-title">Country</h3>
-                <img src="~/country.png" alt="Logo" width="64" height="64" class="d-inline-block align-text-top" alt="Title" />
+                <h3 class="card-title"><a>Country</a></h3>
+                <img src="~/country.png" alt="Logo" width="64" height="64" class="d-inline-block align-text-top" alt="Title"/>
                 <p class="card-text"></p>
+                </div>
             </div>
         </div>
     </div>
     <div class="col-3">
         <div class="card">
+            <div class="classic">
             <div class="card-body">
-                <h3 class="card-title">Classic</h3>
-                <img src="~/classic.png" alt="Logo" width="64" height="64" class="d-inline-block align-text-top" alt="Title" />
+                <h3 class="card-title"><a>Classic</a></h3>
+                   <img src="~/classic.png" alt="Logo" width="64" height="64" class="d-inline-block align-text-top" alt="Title"/>
                 <p class="card-text"></p>
+                </div>
             </div>
         </div>
     </div>

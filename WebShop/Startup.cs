@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Webshop;
 
 namespace WebShop
 {
@@ -17,7 +18,9 @@ namespace WebShop
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // services.AddSingleton<>();
+            services.AddSingleton<IProductRepository, ProductsInMemoryRepository>();
+            services.AddSingleton<ICartsRepository, CartsInMemoryRepository>();
+            // services.AddSingleton<IOrderRepository, OrdersInMemoryRepository>();
             services.AddControllersWithViews();
         }
 
